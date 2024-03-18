@@ -9,14 +9,9 @@ import { getRecordMap } from '@/libs/notion';
 import { getProjectPostsFromNotion } from '@/services/posts';
 import { Post } from '@/types/post';
 
-export default async function PostPage({
-  params: { slug },
-}: {
-  params: { slug: string };
-}) {
+export default async function ProjectPage() {
   const allPosts = await getProjectPostsFromNotion();
-
-  const post = allPosts.find((p) => p.slug === slug);
+  const post = allPosts.find((p) => p.slug === 'project');
   if (!post) {
     return notFound();
   }
@@ -28,7 +23,7 @@ export default async function PostPage({
         className="mx-auto mt-40 text-center"
       >
         <h2 className="mb-4 text-3xl font-bold">Post Not Found</h2>
-        <Link href="/blog">
+        <Link href="/project">
           <span className="mr-2">&larr;</span>
           <span>Go to list page</span>
         </Link>
