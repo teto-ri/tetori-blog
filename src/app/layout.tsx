@@ -10,8 +10,8 @@ import '@/styles/paginate.css';
 
 export const metadata = {
   title: {
-    default: '김시원',
-    template: '%s | 김시원',
+    default: 'Teto-ri',
+    template: '%s | Teto-ri',
   },
 };
 

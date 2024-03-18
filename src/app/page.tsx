@@ -10,7 +10,7 @@ import { getIntroductionPostFromNotion } from '@/services/posts';
 import { Post } from '@/types/post';
 
 export const metadata = {
-  title: 'Welcome | Siwon Kim',
+  title: 'Welcome | Teto-ri',
 };
 
 export default async function HomePage() {

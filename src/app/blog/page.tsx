@@ -5,8 +5,8 @@ import { getAllPostsFromNotion } from '@/services/posts';
 import { toUniqueArray } from '@/utils/to-unique-array';
 
 export const metadata = {
-  title: 'Projects',
-  description: 'by SiwonKim',
+  title: 'Blog',
+  description: 'by teto-ri',
 };
 
 export default async function BlogPage() {
