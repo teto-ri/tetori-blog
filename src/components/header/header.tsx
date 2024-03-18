@@ -15,7 +15,7 @@ export default function Header() {
     <nav className="flex flex-col justify-between pb-0 pt-12 md:flex-row">
       <Link href="/" className="self-start md:self-auto">
         <h1 className="text-3xl font-bold">
-          Teto-ri's Devlog, 3년차 AI 엔지니어의 개발 일지 
+          Teto-ri.Devlog, 3년차 AI엔지니어의 개발일지
         </h1>
       </Link>
       <div className="my-6 flex space-x-8 self-center md:my-0 md:self-auto">
