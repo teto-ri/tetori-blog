@@ -1,7 +1,7 @@
 import CategoryFilter from '@/components/filter/category-filter';
 import SearchBar from '@/components/filter/search-bar';
 import PostsGrid from '@/components/posts/posts-grid';
-import { getProjectPostFromNotion } from '@/services/posts';
+import { getProjectPostsFromNotion } from '@/services/posts';
 import { toUniqueArray } from '@/utils/to-unique-array';
 
 export const metadata = {
@@ -10,7 +10,7 @@ export const metadata = {
 };
 
 export default async function ProjectsPage() {
-  const allPosts = await getProjectPostFromNotion();
+  const allPosts = await getProjectPostsFromNotion();
   const allCategories = toUniqueArray(
     allPosts
       .filter((post) => post.published)

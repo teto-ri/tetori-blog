@@ -126,7 +126,7 @@ export async function getIntroductionPostFromNotion() {
   return allPosts;
 }
 
-export async function getProjectPostFromNotion() {
+export async function getProjectPostsFromNotion() {
   const allPosts: Post[] = [];
 
   // console.log('NOTION_ID', process.env.NOTION_DATABASE_ID);
