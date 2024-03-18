@@ -20,9 +20,7 @@ export async function getAllPostsFromNotion() {
       block[pageId].value.type === 'page' &&
       block[pageId].value.properties[propertyMap['Slug']] &&
       block[pageId].value.properties[propertyMap['Slug']][0][0] !==
-        'introduction' &&
-        block[pageId].value.properties[propertyMap['Slug']][0][0] !==
-          'project'
+        'introduction'
     ) {
       const { properties, last_edited_time } = block[pageId].value;
 
