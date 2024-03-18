@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
-
+import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { Block, ExtendedRecordMap } from 'notion-types';
 import { NotionRenderer } from 'react-notion-x';
@@ -43,6 +43,7 @@ export default function NotionPage({
         Modal,
         Pdf,
         nextImage: Image,
+        nextLink: Link,
       }}
     />
   );
