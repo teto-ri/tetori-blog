@@ -9,8 +9,13 @@ import { getRecordMap } from '@/libs/notion';
 import { getProjectPostsFromNotion } from '@/services/posts';
 import { Post } from '@/types/post';
 
-export default async function ProjectPage() {
+export default async function ProjectPage({
+  params: { slug },
+}: {
+  params: { slug: string };
+}) {
   const allPosts = await getProjectPostsFromNotion();
+
   const post = allPosts.find((p) => p.slug === 'project');
   if (!post) {
     return notFound();
