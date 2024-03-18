@@ -128,10 +128,8 @@ export async function getIntroductionPostFromNotion() {
 
 export async function getProjectPostsFromNotion() {
   const allPosts: Post[] = [];
-
   // console.log('NOTION_ID', process.env.NOTION_DATABASE_ID);
   // console.log('일단 이거 출력해');
-
   const recordMap = await getRecordMap(process.env.NOTION_DATABASE_ID!);
   const { block, collection } = recordMap;
   const schema = Object.values(collection)[0].value.schema;
@@ -145,8 +143,10 @@ export async function getProjectPostsFromNotion() {
     if (
       block[pageId].value.type === 'page' &&
       block[pageId].value.properties[propertyMap['Slug']] &&
-      block[pageId].value.properties[propertyMap['Slug']][0][0] ===
-        'project'
+      block[pageId].value.properties[propertyMap['Slug']][0][0] !==
+        'introduction' &&
+        block[pageId].value.properties[propertyMap['Slug']][0][0] ===
+          'project'
     ) {
       const { properties, last_edited_time } = block[pageId].value;
 
