@@ -10,8 +10,8 @@ import '@/styles/paginate.css';
 
 export const metadata = {
   title: {
-    default: 'Teto-ri',
-    template: '%s | Teto-ri',
+    default: 'Teto-ri.Devlog',
+    template: '%s | Teto-ri.Devlog',
   },
 };
 
