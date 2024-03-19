@@ -63,9 +63,9 @@ export default async function PostPage({
           />
         </div>
         <NotionPage post={post} recordMap={recordMap} />
-        <Comment />
       </article>
       <RelatedPosts posts={relatedPosts} />
+      <Comment />
     </>
   );
 }
