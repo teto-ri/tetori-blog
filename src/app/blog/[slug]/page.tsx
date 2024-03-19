@@ -9,6 +9,7 @@ import { getRecordMap } from '@/libs/notion';
 import { getAllPostsFromNotion } from '@/services/posts';
 import { Post } from '@/types/post';
 import Comment from '@/components/comment/comment';
+
 export default async function PostPage({
   params: { slug },
 }: {
@@ -62,10 +63,10 @@ export default async function PostPage({
           />
         </div>
         <NotionPage post={post} recordMap={recordMap} />
+        <Comment />
       </article>
       <RelatedPosts posts={relatedPosts} />
     </>
-    <Comment />
   );
 }
 
