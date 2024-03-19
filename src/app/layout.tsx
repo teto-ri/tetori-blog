@@ -5,6 +5,7 @@ import 'react-notion-x/src/styles.css';
 import Header from '@/components/header/header';
 import Provider from '@/components/provider';
 import ScrollUpButton from '@/components/scroll-up-button';
+import Footer from '@/components/footer';
 import '@/styles/globals.css';
 import '@/styles/paginate.css';
 
@@ -31,6 +32,7 @@ export default function RootLayout({
           </div>
         </Provider>
       </body>
+      <Footer fullWidth />
     </html>
   );
 }
