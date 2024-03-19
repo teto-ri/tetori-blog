@@ -6,8 +6,15 @@ export default function useMounted() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setTheme(isDarkMode ? 'dark' : 'light');
+    const themeSet = localStorage.getItem('themeSet');
+
+    if (!themeSet) {
+      const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(isDarkMode ? 'dark' : 'light');
+      
+      localStorage.setItem('themeSet', 'true');
+    }
+    
     setMounted(true);
   }, [setTheme]);
 
