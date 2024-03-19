@@ -9,7 +9,7 @@ import { Post } from '@/types/post';
 import { search } from '@/utils/search';
 import { toUniqueArray } from '@/utils/to-unique-array';
 
-const POST_PER_PAGE = 12;
+const POST_PER_PAGE = 6;
 
 export default function usePosts(allPosts: Post[]) {
   const page = useRecoilValue(pageState);
