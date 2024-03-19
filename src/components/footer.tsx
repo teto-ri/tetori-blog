@@ -1,5 +1,5 @@
 import Vercel from '@/components/Vercel'
-const Footer = ({ fullWidth }) => {
+const Footer = ({ fullWidth = 1 }) => {
   const BLOG = {
     since: '2024',
     author: 'Teto-ri',
