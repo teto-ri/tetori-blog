@@ -9,7 +9,7 @@ const COMMENT_THEME = {
 
 const Comment = () => {
   const [container, setContainer] = useState<Element | null>(null);
-  const { mode } = useTheme();
+  const { theme } = useTheme();
   useEffect(() => {
     if (!container) return;
 
@@ -25,7 +25,7 @@ const Comment = () => {
     script.setAttribute('data-reactions-enabled', '1');
     script.setAttribute('data-emit-metadata', '0');
     script.setAttribute('data-input-position', 'bottom');
-    script.setAttribute('data-theme', `${mode}`);
+    script.setAttribute('data-theme', `${theme}`);
     script.setAttribute('data-lang', 'ko');
     script.setAttribute('crossorigin', 'anonymous');
     container.appendChild(script);
@@ -34,11 +34,11 @@ const Comment = () => {
   useEffect(() => {
     if (!container) return;
 
-    const message = mode;
+    const message = theme;
     const commentIframe = container.querySelector('iframe');
 
     commentIframe?.contentWindow?.postMessage(message, 'https://giscus.app');
-  }, [mode]);
+  }, [theme]);
 
   useEffect(() => {
     return () => {
