@@ -2,11 +2,18 @@
 
 import { useTheme } from 'next-themes';
 import { BsMoon, BsMoonFill, BsSun } from 'react-icons/bs';
+import { useEffect } from 'react';
 
 import useMounted from '@/hooks/use-mounted';
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
+  useEffect(() => {
+    if (!theme) {
+      setTheme('light');
+    }
+  }, [theme, setTheme]);
+
   const mounted = useMounted();
   const iconCN = 'z-10 h-8 w-8 p-[0.4rem]';
 
