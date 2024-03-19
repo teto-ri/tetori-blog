@@ -11,7 +11,9 @@
 .notion {
   @apply !bg-transparent;
 }
-
+.notion-quote {
+  font-size: 0.9em;
+}
 .notion-aside-table-of-contents {
   @apply w-2/3 max-w-[300px] bg-transparent px-4 pb-4;
 }
