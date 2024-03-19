@@ -10,7 +10,7 @@ export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   useEffect(() => {
     if (!theme) {
-      setTheme('light');
+      setTheme('dark');
     }
   }, [theme, setTheme]);
 
