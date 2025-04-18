@@ -1,6 +1,4 @@
 # Notion Blog with Next.js 13
-Forked from [wildcatco/notion-blog](https://github.com/wildcatco/notion-blog)
-
 ## 🌟 Tetori's blog Features
 - refactored [wildcatco/notion-blog](https://github.com/wildcatco/notion-blog)
 - add giscus
