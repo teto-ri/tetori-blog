@@ -36,6 +36,7 @@ export default function NotionPage({
         </div>
       }
       mapImageUrl={(url, block) => mapImageUrl(url, block) || ''}
+      mapPageUrl={(id) => `https://www.notion.so/${id.replace(/-/g, '')}`}
       components={{
         Code,
         Collection,
